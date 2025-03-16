@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Snap Digital - Mobile App Development Agency</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.scroll-smooth { scroll-behavior: smooth; }
+.cookie-notice {
+transform: translateY(100%);
+transition: transform 0.3s ease-in-out;
+}
+.cookie-notice.show {
+transform: translateY(0);
+}
+</style>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#6366f1',secondary:'#14b8a6'},borderRadius:{'none':'0px','sm':'8px',DEFAULT:'12px','md':'16px','lg':'20px','xl':'24px','2xl':'28px','3xl':'32px','full':'9999px','button':'12px'}}}}</script>
+</head>
+<body class="font-['Inter'] bg-white">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex-shrink-0 flex items-center">
+<img src="logo.png" alt="Snap Digital Logo" class="h-16">
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<span class="text-xl font-semibold text-gray-900">Snap Digital</span>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#services" class="text-gray-700 hover:text-primary">Services</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+</div>
+<div class="md:hidden flex items-center">
+<button id="menuBtn" class="text-gray-700 w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden">
+<div class="p-4">
+<div class="flex justify-end">
+<button id="closeMenu" class="w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-close-line text-2xl"></i>
+</button>
+</div>
+<div class="flex flex-col space-y-4 mt-8">
+<a href="#services" class="text-gray-700 hover:text-primary py-2">Services</a>
+<a href="#portfolio" class="text-gray-700 hover:text-primary py-2">Portfolio</a>
+<a href="#contact" class="text-gray-700 hover:text-primary py-2">Contact</a>
+</div>
+</div>
+</div>
+<main>
+<section class="relative min-h-[800px] flex items-center pt-16 overflow-hidden" style="background-image: url('bg1.jpg'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-gradient-to-r from-white/95 to-white/50"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+<div class="max-w-2xl">
+<h1 class="text-5xl font-bold text-gray-900 mb-6">Transform Your Ideas Into Powerful Mobile Apps</h1>
+<p class="text-xl text-gray-600 mb-8">We craft innovative mobile solutions that drive business growth and user engagement. Our expert team delivers cutting-edge apps for iOS and Android platforms.</p>
+</div>
+</div>
+</section>
+<section id="services" class="py-24 bg-gray-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
+<p class="text-lg text-gray-600 max-w-2xl mx-auto">We offer comprehensive mobile app development solutions tailored to your business needs</p>
+</div>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-apple-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">iOS Development</h3>
+<p class="text-gray-600">Create beautiful and performant iOS applications using Swift and SwiftUI. We follow Apple's latest guidelines and best practices.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mb-6">
+<i class="ri-android-line text-2xl text-secondary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">Android Development</h3>
+<p class="text-gray-600">Build robust Android applications using Kotlin and Jetpack Compose. We ensure optimal performance across all Android devices.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
+<i class="ri-paint-brush-line text-2xl text-primary"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-3">UI/UX Design</h3>
+<p class="text-gray-600">Design intuitive and engaging user interfaces that provide exceptional user experiences and drive user engagement.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-16 bg-primary">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center">
+<h2 class="text-3xl font-bold text-white mb-4">Ready to Build Your Next App?</h2>
+<p class="text-xl text-white/90 mb-8">Let's discuss your project and create something amazing together</p>
+<button class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-100 text-lg font-medium whitespace-nowrap cursor-pointer">Schedule a Call</button>
+</div>
+</div>
+</section>
+<footer class="bg-gray-900 text-white py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
+<div>
+<img src="logo.png" alt="Snap Digital Logo" class="h-16 mb-6">
+<p class="text-gray-400 mb-6">We create innovative mobile solutions that help businesses grow and succeed in the digital age.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
+<i class="ri-linkedin-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
+<i class="ri-github-line"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
+<i class="ri-instagram-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-6">Contact</h3>
+<ul class="space-y-4">
+<li class="flex items-center">
+<i class="ri-map-pin-line mr-3"></i>
+<span class="text-gray-400">123 Tech Street, San Francisco, CA 94107</span>
+</li>
+<li class="flex items-center">
+<i class="ri-phone-line mr-3"></i>
+<span class="text-gray-400">+1 (555) 123-4567</span>
+</li>
+<li class="flex items-center">
+<i class="ri-mail-line mr-3"></i>
+<span class="text-gray-400">contact@snapdigital.com</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">© 2025 Snap Digital. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</main>
+<div id="cookieNotice" class="cookie-notice fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
+<p class="text-gray-600 mr-8">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+<div class="flex gap-4 mt-4 sm:mt-0">
+<button id="acceptCookies" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap cursor-pointer">Accept</button>
+<button id="declineCookies" class="bg-gray-200 text-gray-700 px-6 py-2 !rounded-button hover:bg-gray-300 whitespace-nowrap cursor-pointer">Decline</button>
+</div>
+</div>
+</div>
+<button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
+<i class="ri-arrow-up-line text-xl"></i>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+const menuBtn = document.getElementById('menuBtn');
+const closeMenu = document.getElementById('closeMenu');
+const mobileMenu = document.getElementById('mobileMenu');
+const backToTop = document.getElementById('backToTop');
+const cookieNotice = document.getElementById('cookieNotice');
+const acceptCookies = document.getElementById('acceptCookies');
+const declineCookies = document.getElementById('declineCookies');
+menuBtn.addEventListener('click', () => {
+mobileMenu.classList.remove('translate-x-full');
+});
+closeMenu.addEventListener('click', () => {
+mobileMenu.classList.add('translate-x-full');
+});
+window.addEventListener('scroll', () => {
+if (window.pageYOffset > 300) {
+backToTop.classList.remove('opacity-0');
+backToTop.classList.add('opacity-100');
+} else {
+backToTop.classList.remove('opacity-100');
+backToTop.classList.add('opacity-0');
+}
+});
+backToTop.addEventListener('click', () => {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+setTimeout(() => {
+cookieNotice.classList.add('show');
+}, 1000);
+acceptCookies.addEventListener('click', () => {
+cookieNotice.classList.remove('show');
+localStorage.setItem('cookiesAccepted', 'true');
+});
+declineCookies.addEventListener('click', () => {
+cookieNotice.classList.remove('show');
+localStorage.setItem('cookiesDeclined', 'true');
+});
+if (localStorage.getItem('cookiesAccepted') || localStorage.getItem('cookiesDeclined')) {
+cookieNotice.style.display = 'none';
+}
+});
+</script>
+</body>
+</html>
