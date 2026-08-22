@@ -143,7 +143,10 @@ button { font-family: inherit; cursor: pointer; }
 .marquee__group b { color: #4A635F; font-weight: 400; }
 
 /* Cards ------------------------------------------------------------------ */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(268px, 100%), 1fr)); gap: 18px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 18px; }
+.grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+@media (max-width: 1040px) { .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .grid--4 { grid-template-columns: minmax(0, 1fr); } }
 .card { padding: 28px; border-radius: 20px; background: #fff; border: 1px solid var(--line); transition: transform .24s var(--ease), box-shadow .24s var(--ease); }
 .card:hover { transform: translateY(-6px); box-shadow: 0 14px 30px rgba(0,0,0,.10); }
 .card__num { width: 44px; height: 44px; border-radius: 14px; background: var(--mint-soft); display: grid; place-items: center; font-weight: 900; color: var(--teal-deep); }
