@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vocabulary Stories — case study | Snap Digital</title>
+<meta name="description" content="How Snap Digital designed, built and released Vocabulary Stories: a Flutter reading app with narrated stories, streaks and flashcards, on iOS and Android.">
+<link rel="canonical" href="https://snapdigital.co.uk/vocabulary-stories.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="index.html"><span class="brand__mark"><i></i></span> Snap Digital</a>
+    <nav class="site-nav" id="siteNav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#work">Work</a>
+      <a href="index.html#process">Process</a>
+      <a href="index.html#faq">FAQ</a>
+      <a class="btn btn--sm btn--dark" href="index.html#contact">Book a call</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+  <section style="padding:clamp(40px,6vw,88px) 0 0">
+    <div class="wrap">
+      <a class="back" href="index.html#work">← All work</a>
+      <div class="chips" style="margin-top:32px">
+        <span class="chip" style="background:var(--lime); border:0; font-weight:800; letter-spacing:.08em; font-size:12px">CASE STUDY</span>
+        <span class="chip" style="background:var(--surface-2); font-weight:800; letter-spacing:.08em; font-size:12px; color:var(--text-muted)">DESIGN + BUILD + RELEASE</span>
+      </div>
+      <h1 class="display h1" style="margin-top:24px">Vocabulary Stories</h1>
+      <p class="lede" style="margin-top:20px; max-width:56ch">A word a day, and the story it came from. We built our own reading app end to end — product, design system, Flutter codebase, and both store releases — and it is now the reference build we show every client.</p>
+      <div class="case-meta">
+        <div><span>ROLE</span><p>Product, design &amp; build</p></div>
+        <div><span>PLATFORMS</span><p>iOS &amp; Android</p></div>
+        <div><span>STACK</span><p>Flutter · Material 3</p></div>
+        <div><span>TYPE</span><p>Playfair · Nunito</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap two-col">
+      <div class="reveal">
+        <p class="eyebrow">The brief</p>
+        <h2 class="display h3" style="margin-top:14px">Vocabulary apps teach lists. People remember stories.</h2>
+        <p style="margin-top:16px; font-size:16px; line-height:1.65; color:var(--text-muted)">Flashcard apps are relentless and forgettable. We wanted a daily habit that felt like reading rather than revising: one short narrated story, the words earned inside it, and a streak worth protecting.</p>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow">What we built</p>
+        <ul class="bullets">
+          <li><span><strong>A daily story</strong> with follow-along audio and the day's words woven in.</span></li>
+          <li><span><strong>Flashcards you earn</strong> rather than grind, tied to the story you just read.</span></li>
+          <li><span><strong>Streaks and a daily list</strong> that make the habit visible without nagging.</span></li>
+          <li><span><strong>A shared design system</strong> — tokens, type and components used by both platforms.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <h2 class="display h3">The screens</h2>
+        <p>Lime for the moments that should feel like a reward. Teal for reading. Everything else gets out of the way.</p>
+      </div>
+      <div class="screens reveal">
+        <figure>
+          <div class="phone">
+            <div class="phone__screen" style="background:var(--lime)">
+              <div class="vs-mark" style="margin-top:36px">Vs</div>
+              <div class="vs-name">VOCABULARY STORIES</div>
+              <p class="vs-strap">A word a day, and the <em>story</em> it came from.</p>
+            </div>
+          </div>
+          <figcaption>Cover · the lock-screen moment</figcaption>
+        </figure>
+        <figure>
+          <div class="phone">
+            <div class="phone__screen" style="background:var(--surface); gap:12px; padding:18px">
+              <p class="mini-label">WEDNESDAY, 3RD DEC</p>
+              <p class="mini-greet" style="font-size:26px">Good to see you, <em>Alex</em>.</p>
+              <div class="story-card">
+                <p class="story-card__kicker">TODAY'S STORY · 4 MIN</p>
+                <p class="story-card__title">The <em>Oubliette</em> in the Garden</p>
+                <span class="story-card__btn">Read &amp; listen</span>
+              </div>
+              <div style="display:flex; align-items:center; justify-content:space-between">
+                <span class="streak">7-day streak</span>
+                <span style="font-size:11px; color:var(--text-faint)">3 of 5 today</span>
+              </div>
+              <ul class="task-list">
+                <li class="task"><i></i> Read today's story</li>
+                <li class="task"><i></i> Guess the word</li>
+                <li class="task task--next"><i></i> Earn 3 flashcards</li>
+              </ul>
+            </div>
+          </div>
+          <figcaption>Today · the daily habit</figcaption>
+        </figure>
+        <figure>
+          <div class="phone">
+            <div class="phone__screen" style="background:var(--teal); gap:14px; padding:18px">
+              <p style="font-size:10px; font-weight:800; letter-spacing:.1em; color:var(--mint)">FLASHCARD 2 OF 3</p>
+              <div style="border-radius:20px; background:var(--surface); padding:20px; flex:1; display:flex; flex-direction:column; justify-content:center; gap:10px">
+                <p style="font-family:var(--display); font-size:30px; line-height:1.05">oubliette</p>
+                <p style="font-size:12px; color:var(--text-faint)">/ˌuːblɪˈɛt/ · noun</p>
+                <p style="font-size:13px; line-height:1.6; color:var(--text-muted)">A hidden dungeon reached only through a trapdoor — or any place a thing is left to be forgotten.</p>
+              </div>
+              <div style="display:flex; gap:10px">
+                <span style="flex:1; text-align:center; padding:13px; border-radius:999px; background:rgba(255,255,255,.16); color:#fff; font-size:12px; font-weight:800">Again</span>
+                <span style="flex:1; text-align:center; padding:13px; border-radius:999px; background:var(--lime); color:var(--lime-ink); font-size:12px; font-weight:900">Got it</span>
+              </div>
+            </div>
+          </div>
+          <figcaption>Flashcard · the payoff</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Under the hood</p>
+        <h2 class="display h3" style="margin-top:14px; max-width:26ch">One codebase, one design system, two stores.</h2>
+      </div>
+      <div class="grid reveal" style="margin-top:36px">
+        <article class="card">
+          <h3 style="margin-top:0">Flutter, tuned per platform</h3>
+          <p>A single Dart codebase with platform-aware navigation, haptics and typography, so neither store's users feel like they got the port.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin-top:0">Material 3 theming</h3>
+          <p>A teal-anchored M3 scheme with one loud accent, defined once as tokens and reused by every screen, sheet and chip.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin-top:0">Narration &amp; offline reading</h3>
+          <p>Stories and audio cached for the commute, with follow-along highlighting kept in step with playback.</p>
+        </article>
+        <article class="card">
+          <h3 style="margin-top:0">Habit mechanics</h3>
+          <p>Local notifications, streak state and a daily task list built to survive time zones, missed days and reinstalls.</p>
+        </article>
+      </div>
+      <div class="quote reveal">
+        <div>WHAT IT GAVE US</div>
+        <p>Building our own product means every client project starts from a real, released codebase and a design system that has already survived app review.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:0 0 clamp(56px,7vw,96px)">
+    <div class="wrap">
+      <div class="cta reveal" style="display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between">
+        <div style="position:relative; z-index:1">
+          <h2 style="font-size:clamp(26px,3.2vw,40px)">Want this for your idea?</h2>
+          <p>Tell us what you're building. We'll tell you what it takes.</p>
+        </div>
+        <a class="btn btn--lime" style="position:relative; z-index:1" href="index.html#contact">Book a call →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid-4">
+      <div>
+        <span class="footer-brand"><span class="footer-brand__mark"><i></i></span> Snap Digital</span>
+        <p style="margin-top:16px; max-width:34ch">A small mobile studio in the West Midlands, building iOS and Android products that earn their place on the home screen.</p>
+      </div>
+      <div>
+        <h4>STUDIO</h4>
+        <ul><li>34 Bedford Road</li><li>Sutton Coldfield, B75 6AB</li><li>United Kingdom</li></ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a class="lime" href="mailto:hello@snapdigital.co.uk">hello@snapdigital.co.uk</a></li>
+          <li><a href="tel:+447356227929">+44 7356 227929</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SITE</h4>
+        <ul>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="index.html#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Snap Digital. All rights reserved.</span>
+      <span>Registered in England &amp; Wales</span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+<script src="site.js"></script>
+</body>
+</html>
