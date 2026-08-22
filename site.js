@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+function init() {
   /* Mobile nav ---------------------------------------------------------- */
   var menuBtn = document.getElementById('menuBtn');
   var nav = document.getElementById('siteNav');
@@ -58,4 +58,19 @@ document.addEventListener('DOMContentLoaded', function () {
   };
   document.getElementById('acceptCookies').addEventListener('click', close('cookiesAccepted'));
   document.getElementById('declineCookies').addEventListener('click', close('cookiesDeclined'));
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+/* Safety net: never leave content invisible if the observer misfires. */
+window.addEventListener('load', function () {
+  setTimeout(function () {
+    document.querySelectorAll('.reveal:not(.in)').forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
+    });
+  }, 1200);
 });
