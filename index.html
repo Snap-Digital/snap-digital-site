@@ -3,213 +3,311 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Snap Digital - Mobile App Development Agency</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>Snap Digital — Mobile App Development Studio, Sutton Coldfield</title>
+<meta name="description" content="Snap Digital designs and ships iOS and Android apps for founders and established teams — Swift, Kotlin, Flutter and React Native, from prototype to store release.">
+<link rel="canonical" href="https://snapdigital.co.uk/">
+<meta property="og:title" content="Snap Digital — apps people keep on the first home screen">
+<meta property="og:description" content="A mobile app studio in the West Midlands. Design, build and release for iOS and Android.">
+<meta property="og:image" content="https://snapdigital.co.uk/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-<style>
-:where([class^="ri-"])::before { content: "\f3c2"; }
-.scroll-smooth { scroll-behavior: smooth; }
-.cookie-notice {
-transform: translateY(100%);
-transition: transform 0.3s ease-in-out;
-}
-.cookie-notice.show {
-transform: translateY(0);
-}
-</style>
-<script>tailwind.config={theme:{extend:{colors:{primary:'#6366f1',secondary:'#14b8a6'},borderRadius:{'none':'0px','sm':'8px',DEFAULT:'12px','md':'16px','lg':'20px','xl':'24px','2xl':'28px','3xl':'32px','full':'9999px','button':'12px'}}}}</script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="font-['Inter'] bg-white">
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="flex justify-between items-center h-16">
-<div class="flex-shrink-0 flex items-center">
-<img src="logo.png" alt="Snap Digital Logo" class="h-16">
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<span class="text-xl font-semibold text-gray-900">Snap Digital</span>
-</div>
-<div class="hidden md:flex items-center space-x-8">
-<a href="#services" class="text-gray-700 hover:text-primary">Services</a>
-<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
-</div>
-<div class="md:hidden flex items-center">
-<button id="menuBtn" class="text-gray-700 w-10 h-10 flex items-center justify-center cursor-pointer">
-<i class="ri-menu-line text-2xl"></i>
-</button>
-</div>
-</div>
-</div>
-</nav>
-<div id="mobileMenu" class="fixed inset-0 bg-white z-40 transform translate-x-full transition-transform duration-300 md:hidden">
-<div class="p-4">
-<div class="flex justify-end">
-<button id="closeMenu" class="w-10 h-10 flex items-center justify-center cursor-pointer">
-<i class="ri-close-line text-2xl"></i>
-</button>
-</div>
-<div class="flex flex-col space-y-4 mt-8">
-<a href="#services" class="text-gray-700 hover:text-primary py-2">Services</a>
-<a href="#portfolio" class="text-gray-700 hover:text-primary py-2">Portfolio</a>
-<a href="#contact" class="text-gray-700 hover:text-primary py-2">Contact</a>
-</div>
-</div>
-</div>
+<body>
+
+<header class="site-header">
+  <div class="wrap site-header__inner">
+    <a class="brand" href="/"><span class="brand__mark"><i></i></span> Snap Digital</a>
+    <nav class="site-nav" id="siteNav">
+      <a href="#services">Services</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn--sm btn--dark" href="#contact">Book a call</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
 <main>
-<section class="relative min-h-[800px] flex items-center pt-16 overflow-hidden" style="background-image: url('bg1.jpg'); background-size: cover; background-position: center;">
-<div class="absolute inset-0 bg-gradient-to-r from-white/95 to-white/50"></div>
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-<div class="max-w-2xl">
-<h1 class="text-5xl font-bold text-gray-900 mb-6">Transform Your Ideas Into Powerful Mobile Apps</h1>
-<p class="text-xl text-gray-600 mb-8">We craft innovative mobile solutions that drive business growth and user engagement. Our expert team delivers cutting-edge apps for iOS and Android platforms.</p>
-</div>
-</div>
-</section>
-<section id="services" class="py-24 bg-gray-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center mb-16">
-<h2 class="text-3xl font-bold text-gray-900 mb-4">Our Services</h2>
-<p class="text-lg text-gray-600 max-w-2xl mx-auto">We offer comprehensive mobile app development solutions tailored to your business needs</p>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
-<i class="ri-apple-line text-2xl text-primary"></i>
-</div>
-<h3 class="text-xl font-semibold text-gray-900 mb-3">iOS Development</h3>
-<p class="text-gray-600">Create beautiful and performant iOS applications using Swift and SwiftUI. We follow Apple's latest guidelines and best practices.</p>
-</div>
-<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-<div class="w-12 h-12 flex items-center justify-center bg-secondary/10 rounded-lg mb-6">
-<i class="ri-android-line text-2xl text-secondary"></i>
-</div>
-<h3 class="text-xl font-semibold text-gray-900 mb-3">Android Development</h3>
-<p class="text-gray-600">Build robust Android applications using Kotlin and Jetpack Compose. We ensure optimal performance across all Android devices.</p>
-</div>
-<div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-<div class="w-12 h-12 flex items-center justify-center bg-primary/10 rounded-lg mb-6">
-<i class="ri-paint-brush-line text-2xl text-primary"></i>
-</div>
-<h3 class="text-xl font-semibold text-gray-900 mb-3">UI/UX Design</h3>
-<p class="text-gray-600">Design intuitive and engaging user interfaces that provide exceptional user experiences and drive user engagement.</p>
-</div>
-</div>
-</div>
-</section>
-<section class="py-16 bg-primary">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="text-center">
-<h2 class="text-3xl font-bold text-white mb-4">Ready to Build Your Next App?</h2>
-<p class="text-xl text-white/90 mb-8">Let's discuss your project and create something amazing together</p>
-<button class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-100 text-lg font-medium whitespace-nowrap cursor-pointer">Schedule a Call</button>
-</div>
-</div>
-</section>
-<footer class="bg-gray-900 text-white py-16">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-<div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
-<div>
-<img src="logo.png" alt="Snap Digital Logo" class="h-16 mb-6">
-<p class="text-gray-400 mb-6">We create innovative mobile solutions that help businesses grow and succeed in the digital age.</p>
-<div class="flex space-x-4">
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
-<i class="ri-twitter-x-line"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
-<i class="ri-linkedin-line"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
-<i class="ri-github-line"></i>
-</a>
-<a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-gray-700 cursor-pointer">
-<i class="ri-instagram-line"></i>
-</a>
-</div>
-</div>
-<div>
-<h3 class="text-lg font-semibold mb-6">Contact</h3>
-<ul class="space-y-4">
-<li class="flex items-center">
-<i class="ri-map-pin-line mr-3"></i>
-<span class="text-gray-400">34, Bedford road, Sutton Coldfield - B75 6AB</span>
-</li>
-<li class="flex items-center">
-<i class="ri-phone-line mr-3"></i>
-<span class="text-gray-400">+44 7356227929</span>
-</li>
-<li class="flex items-center">
-<i class="ri-mail-line mr-3"></i>
-<span class="text-gray-400">hello@snapdigital.co.uk</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="border-t border-gray-800 mt-12 pt-8 text-center">
-<p class="text-gray-400">© 2025 Snap Digital. All rights reserved.</p>
-</div>
-</div>
-</footer>
+  <section class="hero">
+    <div class="hero__glow"></div>
+    <div class="wrap hero__grid">
+      <div class="reveal">
+        <p class="pill"><i></i> Mobile app studio · Sutton Coldfield, UK</p>
+        <h1 class="display h1" style="margin-top:22px">Apps people keep on the <span class="mark">first</span> home screen.</h1>
+        <p class="lede" style="margin-top:22px; max-width:52ch">We design and ship iOS and Android products for founders and established teams — from the first prototype to a store listing that holds up under real users.</p>
+        <div class="hero__cta">
+          <a class="btn btn--lime" href="#contact">Book a call →</a>
+          <a class="btn btn--ghost" href="vocabulary-stories.html">See a build in detail</a>
+        </div>
+        <p class="hero__note">30-minute discovery call. No deck, no pressure.</p>
+      </div>
+
+      <div class="hero__art reveal">
+        <div class="phone phone--a">
+          <div class="phone__screen">
+            <div class="status"><span>9:41</span><span class="status__notch"></span><span class="status__battery"><i></i></span></div>
+            <div class="vs-mark">Vs</div>
+            <div class="vs-name">VOCABULARY STORIES</div>
+            <p class="vs-strap">A word a day, and the <em>story</em> it came from.</p>
+          </div>
+        </div>
+        <div class="phone phone--b">
+          <div class="phone__screen">
+            <p class="mini-label">WEDNESDAY, 3RD DEC</p>
+            <p class="mini-greet">Good to see you, <em>Alex</em>.</p>
+            <div class="story-card">
+              <p class="story-card__kicker">TODAY'S STORY · 4 MIN</p>
+              <p class="story-card__title">The <em>Oubliette</em> in the Garden</p>
+              <span class="story-card__btn">Read &amp; listen</span>
+            </div>
+            <span class="streak">7-day streak</span>
+            <ul class="task-list">
+              <li class="task"><i></i> Read today's story</li>
+              <li class="task"><i></i> Listen &amp; follow along</li>
+              <li class="task task--next"><i></i> Earn 3 flashcards</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee">
+    <div class="marquee__track">
+      <div class="marquee__group">
+        <span class="on">SWIFT &amp; SWIFTUI</span><b>◆</b><span>KOTLIN &amp; COMPOSE</span><b>◆</b><span class="alt">FLUTTER</span><b>◆</b><span class="alt">REACT NATIVE</span><b>◆</b><span>MATERIAL 3</span><b>◆</b><span>APPLE HIG</span><b>◆</b><span class="on">APP STORE &amp; PLAY RELEASES</span><b>◆</b>
+      </div>
+      <div class="marquee__group" aria-hidden="true">
+        <span class="on">SWIFT &amp; SWIFTUI</span><b>◆</b><span>KOTLIN &amp; COMPOSE</span><b>◆</b><span class="alt">FLUTTER</span><b>◆</b><span class="alt">REACT NATIVE</span><b>◆</b><span>MATERIAL 3</span><b>◆</b><span>APPLE HIG</span><b>◆</b><span class="on">APP STORE &amp; PLAY RELEASES</span><b>◆</b>
+      </div>
+    </div>
+  </div>
+
+  <section class="section" id="services">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow">Services</p>
+          <h2 class="display h2" style="margin-top:14px; max-width:22ch">Everything between the idea and the download.</h2>
+        </div>
+        <p>One small senior team on your project — the people who design it are the people who ship it.</p>
+      </div>
+      <div class="grid" style="margin-top:44px">
+        <article class="card reveal">
+          <div class="card__num">01</div>
+          <h3>Product &amp; UI/UX</h3>
+          <p>Scoping workshops, flows, and a clickable prototype you can put in front of users before a line of production code exists.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__num">02</div>
+          <h3>iOS development</h3>
+          <p>Swift and SwiftUI, built to Apple's Human Interface Guidelines so review goes smoothly and the app feels native on day one.</p>
+        </article>
+        <article class="card reveal">
+          <div class="card__num">03</div>
+          <h3>Android development</h3>
+          <p>Kotlin and Jetpack Compose with Material 3 theming, tested across the device sizes your users actually hold.</p>
+        </article>
+        <article class="card card--dark reveal">
+          <div class="card__num">04</div>
+          <h3>Cross-platform: Flutter &amp; React Native</h3>
+          <p>One codebase, both stores, no compromise on feel. We build in Flutter or React Native and pick whichever fits your team, not our habits.</p>
+        </article>
+        <article class="card card--wide reveal">
+          <div style="flex:1 1 320px; min-width:260px">
+            <h3 style="margin-top:0">Launch, store listing &amp; aftercare</h3>
+            <p style="max-width:60ch">Submission, screenshots and copy, analytics, crash monitoring, and a support arrangement after release — because launch day is the middle of the project, not the end.</p>
+          </div>
+          <div class="chips">
+            <span class="chip">TestFlight</span><span class="chip">Play Console</span><span class="chip">Analytics</span><span class="chip">Crash reporting</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div>
+          <p class="eyebrow eyebrow--lime">Selected work</p>
+          <h2 class="display h2" style="margin-top:14px">Shipped, not slideware.</h2>
+        </div>
+      </div>
+
+      <a class="case reveal" href="vocabulary-stories.html" style="margin-top:40px">
+        <div class="case__body">
+          <div>
+            <span class="case__tag">CASE STUDY · OUR OWN PRODUCT</span>
+            <h3 class="case__title">Vocabulary Stories</h3>
+            <p>A word a day, and the story it came from. A Flutter reading app with narrated stories, streaks and flashcards — designed, built and released on both stores by us.</p>
+          </div>
+          <div class="case__meta">
+            <span class="chip">Flutter</span><span class="chip">Material 3</span><span class="chip">iOS + Android</span>
+            <span class="case__more">Read the case study →</span>
+          </div>
+        </div>
+        <div class="case__art">
+          <div class="phone" style="width:230px; border-radius:34px 34px 0 0; padding:8px 8px 0; background:#0B0F00">
+            <div class="phone__screen" style="border-radius:27px 27px 0 0; background:var(--surface); min-height:300px; gap:12px; padding:18px">
+              <p class="mini-greet" style="font-size:22px">The <em>Oubliette</em> in the Garden</p>
+              <p style="font-size:12px; line-height:1.65; color:var(--text-muted)">She had not thought of the word in years, but the garden gave it back to her — a forgotten place, kept just out of reach.</p>
+              <div class="story-card" style="margin-top:auto">
+                <p class="story-card__kicker">WORD 1 OF 3</p>
+                <p class="story-card__title" style="font-size:22px">oubliette</p>
+                <p style="font-size:11px; color:var(--teal-deep)">/ˌuːblɪˈɛt/ · noun</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </a>
+
+      <div class="nda reveal">
+        <p>Two further client apps are under NDA and can't be shown publicly. We'll walk you through the builds, the architecture and the numbers on a call.</p>
+        <a href="#contact">Ask to see them →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="process">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">How we work</p>
+        <h2 class="display h2" style="margin-top:14px; max-width:24ch">Four stages, fixed scope, weekly demos.</h2>
+      </div>
+      <div class="grid" style="margin-top:44px">
+        <article class="step reveal">
+          <p class="step__num">STAGE 01</p><h3>Scope</h3>
+          <p>A working session on users, must-haves and the honest cut list. You leave with a written scope and a fixed quote.</p>
+        </article>
+        <article class="step reveal">
+          <p class="step__num">STAGE 02</p><h3>Design</h3>
+          <p>Flows, then screens, then a prototype on a real device. Nothing goes into build until it survives someone's thumb.</p>
+        </article>
+        <article class="step reveal">
+          <p class="step__num">STAGE 03</p><h3>Build</h3>
+          <p>Two-week cycles, a TestFlight or Play build at the end of each, and a demo call you're welcome to bring anyone to.</p>
+        </article>
+        <article class="step step--dark reveal">
+          <p class="step__num">STAGE 04</p><h3>Launch &amp; iterate</h3>
+          <p>Store submission, monitoring, and a first post-launch release planned before anyone opens the champagne.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tint" id="faq">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center">
+        <p class="eyebrow">FAQ</p>
+        <h2 class="display h2" style="margin-top:14px">The questions we always get.</h2>
+      </div>
+      <div class="faq reveal">
+        <div class="faq__item open">
+          <button class="faq__q" aria-expanded="true">What does an app cost? <span>+</span></button>
+          <div class="faq__a">We quote a fixed price against a written scope after the first call, so you're never signing up to an open-ended day rate. Smaller, single-purpose apps and full multi-platform products sit at very different ends of that range — the scoping session is what tells us which one you have.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">How long until we're live? <span>+</span></button>
+          <div class="faq__a">Design runs first, then build in two-week cycles with a testable build at the end of each. You'll have a dated plan before we start, and store review time is built into it rather than bolted on at the end.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">We're non-technical. Is that a problem? <span>+</span></button>
+          <div class="faq__a">No — most of our founders are. We take the technical decisions, explain the ones that affect cost or timeline in plain English, and never make you choose between options you can't evaluate.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">Who owns the code and the store accounts? <span>+</span></button>
+          <div class="faq__a">You do. The repository, the Apple and Google accounts, and every third-party service sit in your name from the first commit. If you ever move to another team, there's nothing to untangle.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">Can you take over an app someone else started? <span>+</span></button>
+          <div class="faq__a">Often, yes. We start with a short paid audit of the codebase and release setup, then tell you honestly whether it's worth continuing or rebuilding — including when the answer costs us the bigger project.</div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__q" aria-expanded="false">Do you work as a white-label team for agencies? <span>+</span></button>
+          <div class="faq__a">Yes. We take the mobile half of projects for design and web agencies, work to your process, and stay off the client call entirely if that's how you'd prefer to run it.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div class="cta__grid">
+          <div>
+            <h2>Ready to build your next app?</h2>
+            <p>Bring us a sketch, a spec, or a half-finished build. Thirty minutes on a call and you'll know what it takes, what it costs, and whether we're the right team for it.</p>
+            <div class="cta__actions">
+              <a class="btn btn--lime" href="mailto:hello@snapdigital.co.uk">Book a call →</a>
+              <a class="btn btn--onteal" href="tel:+447356227929">+44 7356 227929</a>
+            </div>
+          </div>
+          <div class="cta__cards">
+            <div class="cta__card">
+              <div>EMAIL</div>
+              <a href="mailto:hello@snapdigital.co.uk">hello@snapdigital.co.uk</a>
+            </div>
+            <div class="cta__card">
+              <div>STUDIO</div>
+              <p>34 Bedford Road, Sutton Coldfield<br>B75 6AB, United Kingdom</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
-<div id="cookieNotice" class="cookie-notice fixed bottom-0 left-0 right-0 bg-white shadow-lg p-4 z-50">
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-between">
-<p class="text-gray-600 mr-8">We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
-<div class="flex gap-4 mt-4 sm:mt-0">
-<button id="acceptCookies" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-primary/90 whitespace-nowrap cursor-pointer">Accept</button>
-<button id="declineCookies" class="bg-gray-200 text-gray-700 px-6 py-2 !rounded-button hover:bg-gray-300 whitespace-nowrap cursor-pointer">Decline</button>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="grid-4">
+      <div>
+        <span class="footer-brand"><span class="footer-brand__mark"><i></i></span> Snap Digital</span>
+        <p style="margin-top:16px; max-width:34ch">A small mobile studio in the West Midlands, building iOS and Android products that earn their place on the home screen.</p>
+      </div>
+      <div>
+        <h4>STUDIO</h4>
+        <ul><li>34 Bedford Road</li><li>Sutton Coldfield, B75 6AB</li><li>United Kingdom</li></ul>
+      </div>
+      <div>
+        <h4>CONTACT</h4>
+        <ul>
+          <li><a class="lime" href="mailto:hello@snapdigital.co.uk">hello@snapdigital.co.uk</a></li>
+          <li><a href="tel:+447356227929">+44 7356 227929</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>SITE</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Snap Digital. All rights reserved.</span>
+      <span>Registered in England &amp; Wales</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookieNotice">
+  <div class="wrap cookie__inner">
+    <p>We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.</p>
+    <div style="display:flex; gap:12px">
+      <button class="btn btn--sm btn--dark" id="acceptCookies">Accept</button>
+      <button class="btn btn--sm btn--ghost" id="declineCookies">Decline</button>
+    </div>
+  </div>
 </div>
-</div>
-</div>
-<button id="backToTop" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 transition-opacity duration-300 cursor-pointer">
-<i class="ri-arrow-up-line text-xl"></i>
-</button>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-const menuBtn = document.getElementById('menuBtn');
-const closeMenu = document.getElementById('closeMenu');
-const mobileMenu = document.getElementById('mobileMenu');
-const backToTop = document.getElementById('backToTop');
-const cookieNotice = document.getElementById('cookieNotice');
-const acceptCookies = document.getElementById('acceptCookies');
-const declineCookies = document.getElementById('declineCookies');
-menuBtn.addEventListener('click', () => {
-mobileMenu.classList.remove('translate-x-full');
-});
-closeMenu.addEventListener('click', () => {
-mobileMenu.classList.add('translate-x-full');
-});
-window.addEventListener('scroll', () => {
-if (window.pageYOffset > 300) {
-backToTop.classList.remove('opacity-0');
-backToTop.classList.add('opacity-100');
-} else {
-backToTop.classList.remove('opacity-100');
-backToTop.classList.add('opacity-0');
-}
-});
-backToTop.addEventListener('click', () => {
-window.scrollTo({
-top: 0,
-behavior: 'smooth'
-});
-});
-setTimeout(() => {
-cookieNotice.classList.add('show');
-}, 1000);
-acceptCookies.addEventListener('click', () => {
-cookieNotice.classList.remove('show');
-localStorage.setItem('cookiesAccepted', 'true');
-});
-declineCookies.addEventListener('click', () => {
-cookieNotice.classList.remove('show');
-localStorage.setItem('cookiesDeclined', 'true');
-});
-if (localStorage.getItem('cookiesAccepted') || localStorage.getItem('cookiesDeclined')) {
-cookieNotice.style.display = 'none';
-}
-});
-</script>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+<script src="site.js"></script>
 </body>
 </html>

@@ -1,0 +1,61 @@
+document.addEventListener('DOMContentLoaded', function () {
+  /* Mobile nav ---------------------------------------------------------- */
+  var menuBtn = document.getElementById('menuBtn');
+  var nav = document.getElementById('siteNav');
+  if (menuBtn && nav) {
+    menuBtn.addEventListener('click', function () { nav.classList.toggle('open'); });
+    nav.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') nav.classList.remove('open');
+    });
+  }
+
+  /* Scroll reveals ------------------------------------------------------ */
+  var reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry, i) {
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        setTimeout(function () { el.classList.add('in'); }, i * 70);
+        io.unobserve(el);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: 0.06 });
+    reveals.forEach(function (el) { io.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* FAQ ----------------------------------------------------------------- */
+  document.querySelectorAll('.faq__q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.parentElement;
+      var open = item.classList.contains('open');
+      document.querySelectorAll('.faq__item').forEach(function (i) { i.classList.remove('open'); });
+      if (!open) item.classList.add('open');
+      btn.setAttribute('aria-expanded', String(!open));
+    });
+  });
+
+  /* Back to top --------------------------------------------------------- */
+  var toTop = document.getElementById('toTop');
+  if (toTop) {
+    window.addEventListener('scroll', function () {
+      toTop.classList.toggle('show', window.pageYOffset > 400);
+    });
+    toTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+  }
+
+  /* Cookie notice (unchanged behaviour from the previous site) ----------- */
+  var cookie = document.getElementById('cookieNotice');
+  if (!cookie) return;
+  if (localStorage.getItem('cookiesAccepted') || localStorage.getItem('cookiesDeclined')) {
+    cookie.style.display = 'none';
+    return;
+  }
+  setTimeout(function () { cookie.classList.add('show'); }, 1200);
+  var close = function (key) {
+    return function () { cookie.classList.remove('show'); localStorage.setItem(key, 'true'); };
+  };
+  document.getElementById('acceptCookies').addEventListener('click', close('cookiesAccepted'));
+  document.getElementById('declineCookies').addEventListener('click', close('cookiesDeclined'));
+});
