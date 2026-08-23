@@ -46,31 +46,48 @@
       </div>
 
       <div class="hero__art reveal">
-        <div class="phone phone--a">
-          <div class="phone__screen">
-            <div class="status"><span>9:41</span><span class="status__notch"></span><span class="status__battery"><i></i></span></div>
-            <div class="vs-mark">Vs</div>
-            <div class="vs-name">VOCABULARY STORIES</div>
-            <p class="vs-strap">A word a day, and the <em>story</em> it came from.</p>
-          </div>
-        </div>
-        <div class="phone phone--b">
-          <div class="phone__screen">
-            <p class="mini-label">WEDNESDAY, 3RD DEC</p>
-            <p class="mini-greet">Good to see you, <em>Alex</em>.</p>
-            <div class="story-card">
-              <p class="story-card__kicker">TODAY'S STORY · 4 MIN</p>
-              <p class="story-card__title">The <em>Oubliette</em> in the Garden</p>
-              <span class="story-card__btn">Read &amp; listen</span>
+        <div class="carousel" id="heroCarousel">
+          <div class="carousel__track" id="heroTrack">
+            <div class="carousel__slide">
+              <div class="phone phone--a">
+                <div class="phone__screen">
+                  <div class="status"><span>9:41</span><span class="status__notch"></span><span class="status__cell"><span class="status__battery"><i></i></span></span></div>
+                  <div class="vs-mark">Vs</div>
+                  <div class="vs-name">VOCABULARY STORIES</div>
+                  <p class="vs-strap">A word a day, and the <em>story</em> it came from.</p>
+                </div>
+              </div>
             </div>
-            <span class="streak">7-day streak</span>
-            <ul class="task-list">
-              <li class="task"><i></i> Read today's story</li>
-              <li class="task"><i></i> Listen &amp; follow along</li>
-              <li class="task task--next"><i></i> Earn 3 flashcards</li>
-            </ul>
+            <div class="carousel__slide">
+              <div class="phone phone--b">
+                <div class="phone__screen">
+                  <p class="mini-label">WEDNESDAY, 3RD DEC</p>
+                  <p class="mini-greet">Good to see you, <em>Alex</em>.</p>
+                  <div class="story-card">
+                    <p class="story-card__kicker">TODAY'S STORY · 4 MIN</p>
+                    <p class="story-card__title">The <em>Oubliette</em> in the Garden</p>
+                    <span class="story-card__btn">Read &amp; listen</span>
+                  </div>
+                  <span class="streak">7-day streak</span>
+                  <ul class="task-list">
+                    <li class="task"><i></i> Read today's story</li>
+                    <li class="task"><i></i> Listen &amp; follow along</li>
+                    <li class="task task--next"><i></i> Earn 3 flashcards</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="carousel__ui">
+          <button class="carousel__arrow" type="button" data-carousel-prev aria-label="Previous screen">←</button>
+          <div class="carousel__dots" id="heroDots">
+            <button type="button" data-slide="0" aria-current="true" aria-label="Cover screen"></button>
+            <button type="button" data-slide="1" aria-current="false" aria-label="Today screen"></button>
+          </div>
+          <button class="carousel__arrow" type="button" data-carousel-next aria-label="Next screen">→</button>
+        </div>
+        <p class="carousel__caption" id="heroCaption">COVER · VOCABULARY STORIES</p>
       </div>
     </div>
   </section>

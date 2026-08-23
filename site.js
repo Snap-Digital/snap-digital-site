@@ -9,6 +9,32 @@ function init() {
     });
   }
 
+  /* Hero carousel ------------------------------------------------------- */
+  var track = document.getElementById('heroTrack');
+  if (track) {
+    var dots = [].slice.call(document.querySelectorAll('#heroDots button'));
+    var caption = document.getElementById('heroCaption');
+    var captions = ['COVER · VOCABULARY STORIES', 'TODAY · THE DAILY HABIT'];
+    var slide = 0, timer;
+    var render = function () {
+      track.style.transform = 'translateX(' + (slide * -100) + '%)';
+      dots.forEach(function (d, i) { d.setAttribute('aria-current', String(i === slide)); });
+      if (caption) caption.textContent = captions[slide];
+    };
+    var go = function (n, manual) {
+      slide = (n + captions.length) % captions.length;
+      if (manual) clearInterval(timer);
+      render();
+    };
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { go(i, true); }); });
+    var prevBtn = document.querySelector('[data-carousel-prev]');
+    var nextBtn = document.querySelector('[data-carousel-next]');
+    if (prevBtn) prevBtn.addEventListener('click', function () { go(slide - 1, true); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { go(slide + 1, true); });
+    timer = setInterval(function () { go(slide + 1); }, 5200);
+    render();
+  }
+
   /* Scroll reveals ------------------------------------------------------ */
   var reveals = document.querySelectorAll('.reveal');
   if ('IntersectionObserver' in window) {
