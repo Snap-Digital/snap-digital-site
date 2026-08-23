@@ -17,7 +17,7 @@
   --text-muted: #3F4947;
   --text-faint: #6F7976;
   --display: 'Playfair Display', Georgia, serif;
-  --body: 'Nunito', system-ui, -apple-system, sans-serif;
+  --body: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
   --ease: cubic-bezier(.2, 0, 0, 1);
 }
 
